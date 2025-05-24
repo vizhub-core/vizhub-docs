@@ -1,32 +1,73 @@
-**VizHub** is an open-source platform designed for creating, sharing, and collaborating on data visualizations in real time. It enables users to build interactive visualizations using **HTML, CSS, and JavaScript** (often paired with libraries like D3.js or Vega-Lite) and share them with others via a web browser. Here's a breakdown of its key features:
+# VizHub Feature Overview
 
-### Key Features of VizHub:
-1. **Real-Time Collaboration**  
-   - Multiple users can edit and view a visualization simultaneously, similar to Google Docs.
+**VizHub** is an open-source platform for creating, modifying, and sharing interactive data visualizations built with **HTML, CSS, and JavaScript** (often alongside libraries such as D3.js or Vega-Lite). Below is a concise guide to the core workflow and capabilities that set VizHub apart.
 
-2. **Open Source**  
-   - The platform is self-hostable and built on open-source tools (e.g., Node.js, React). The community maintains and improves it via public repositories (e.g., [VizHub GitHub](https://github.com/VizHub/)).
+---
 
-3. **Code-First Approach**  
-   - Targeted at developers, it emphasizes coding visualizations from scratch rather than using drag-and-drop interfaces. Users write and share live-updating visualizations.
+## Core Workflow
 
-4. **Integrated Dev Tools**  
-   - Includes a built-in code editor, version control, and live previews for rapid iteration.
+1. **Fork → Modify → Share**
 
-5. **Interactive Dashboards**  
-   - Users can create dynamic, browser-based dashboards that respond to user input or real-time data streams.
+   | Step | What Happens in VizHub | Why It Matters |
+   |------|------------------------|----------------|
+   | **Fork** | Click **Fork** on any public “Viz” to create your own copy. | Start from a working example instead of a blank page. |
+   | **Modify** | Edit code directly in the browser—change data, tweak styles, add interactions. | Rapid prototyping without local setup. |
+   | **Share** | Generate a unique URL, social card, and embed snippet with a single click. | Instantly show your work to the world. |
 
-6. **Community Sharing**  
-   - Visualizations (called "Viz") can be publicly shared, forked, or embedded in websites.
+---
 
-### Comparison to Tools Like Tableau/Power BI:
-- **Target Audience**: Developers and data scientists comfortable coding visualizations.  
-- **Flexibility**: Greater control for custom visualizations vs. pre-built templates.  
-- **Collaboration**: Similar to Figma or Google Workspace, but for code-driven visualizations.  
+## Feature Highlights
 
-### Use Cases:
-- Prototyping interactive visualizations for stakeholders.
-- Teaching or demonstrating data visualization techniques.
-- Collaborative projects where version tracking and real-time edits are critical.
+### 🖍️ Forking & Modifying
+- **One-Click Fork**: Duplicate any public visualization to kick-start your own version.  
+- **Version Isolation**: Your fork tracks its own history, leaving the original untouched.
 
-If you're looking for a **no-code tool**, platforms like Tableau or Power BI might be better. For programmatic, collaborative visualizations, VizHub is a strong, open-source option. Let me know if you'd like help getting started!
+### 🤖 Editing with AI
+- **AI Code Assistant**: Invoke **/ai-edit** to get line-level refactors, doc comments, or full rewrites.  
+- **Prompt-Based Changes**: Describe what you want (“add a tooltip”) and watch the editor update in seconds.
+
+### 🔒 Changing Visibility
+- **Public ↔ Private Toggle**: Switch a Viz between public, unlisted, or private at any time.  
+- **Team-Only Mode**: Share privately with collaborators without exposing the link publicly.
+
+### 👥 Real-Time Collaboration
+- **Live Cursor Presence**: See teammates’ cursors and selections, Google-Docs style.  
+- **Conflict-Free Merging**: Edits sync instantly—no git conflicts or refreshes required.
+
+### 📣 Sharing on Social Media
+- **Smart Social Cards**: VizHub auto-generates Open Graph images so links look great on X/Twitter, LinkedIn, and Facebook.  
+- **Permalink Stability**: Each visualization has a canonical URL that never changes.
+
+### 🖼️ Embedding
+- **Iframe Snippet**: Copy-paste a tiny embed tag into Medium, Notion, or your own blog.  
+- **Responsive by Default**: Embedded visualizations resize to fit any container or device.
+
+### 💾 Exporting Code
+- **Download ZIP**: Grab a clean, runnable bundle of HTML, JS, CSS, and assets.  
+- **Choose Bundler**: Export plain ES modules or a pre-built Rollup bundle for older browsers.
+
+### 🏃 Running Exported Code Locally
+1. **Unzip** the download.
+2. **Install Dependencies** (if any):
+   ```bash
+   npm install
+````
+
+3. **Start a Local Server**:
+
+   ```bash
+   npx serve .
+   # or
+   npm run dev   # if a Vite config is included
+   ```
+4. Open `http://localhost:3000` (or the printed port) to view the visualization offline.
+
+---
+
+## Why Developers Love VizHub
+
+* **No Infrastructure Overhead**: Skip the boilerplate; focus on the visualization.
+* **Instant Feedback Loop**: Live preview updates with every keystroke.
+* **Open Source & Self-Hostable**: Deploy your own VizHub if you need complete control.
+
+Ready to explore? Fork a Viz, try the AI editor, and share your creation with the world—no install required.
